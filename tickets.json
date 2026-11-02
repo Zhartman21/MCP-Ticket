@@ -1,0 +1,155 @@
+[
+  {
+    "id": "T-1001", "client": "Acme Dental Group", "client_slug": "acme-dental", "contact": "Lisa Moreno (Office Manager)",
+    "priority": "p3", "tech": "zayvier", "type": "m365", "days_ago": 40, "status": "closed",
+    "title": "Outlook keeps prompting for password after password change",
+    "description": "User changed her password yesterday. Outlook desktop now prompts for credentials every few minutes. OWA works fine. Only affects her workstation (ACME-FD01).",
+    "resolution": "Cleared cached Office credentials in Credential Manager, signed out of all Office apps, removed and re-added the account in Outlook. Prompts stopped. Confirmed MFA method was still registered."
+  },
+  {
+    "id": "T-1002", "client": "Brightwater Logistics", "client_slug": "brightwater", "contact": "Dan Okafor (Dispatch Lead)",
+    "priority": "p3", "tech": "marcus", "type": "m365", "days_ago": 33, "status": "closed",
+    "title": "Outlook stuck on 'Updating' and not receiving new mail",
+    "description": "Dispatch lead says Outlook has shown 'Updating Inbox' all morning. New mail visible on phone but not desktop.",
+    "resolution": "OST was 48 GB and corrupted. Rebuilt the Outlook profile and set cached mode to 6 months. Mail synced within 20 minutes."
+  },
+  {
+    "id": "T-1003", "client": "Cedar Ridge Law", "client_slug": "cedar-ridge", "contact": "Hannah Brooks (Paralegal)",
+    "priority": "p3", "tech": "zayvier", "type": "m365", "days_ago": 2, "status": "open",
+    "title": "Outlook repeatedly asking for password on two workstations",
+    "description": "Two paralegals report Outlook prompting for their password over and over since Monday. Both changed passwords last week per the firm's 90 day policy. Web mail works."
+  },
+  {
+    "id": "T-1004", "client": "Northpine Credit Union", "client_slug": "northpine", "contact": "Greg Saunders (Operations Manager)",
+    "priority": "p1", "tech": "priya", "type": "security", "days_ago": 25, "status": "closed",
+    "title": "Suspicious inbox rule forwarding mail to external address",
+    "description": "Loan officer noticed replies to emails she never sent. Found an inbox rule named '..' forwarding all mail containing 'invoice' or 'wire' to an external Gmail address.",
+    "resolution": "Disabled the rule, revoked all sessions, reset password, enforced MFA re-registration. Sign-in logs showed a successful login from an overseas IP 3 days prior. Blocked automatic external forwarding in the outbound spam policy for the tenant. Notified client contact and documented timeline for their compliance team."
+  },
+  {
+    "id": "T-1005", "client": "Summit Peak Construction", "client_slug": "summit-peak", "contact": "Rob Delgado (Estimator)",
+    "priority": "p2", "tech": "priya", "type": "security", "days_ago": 1, "status": "open",
+    "title": "User reported phishing email, may have clicked link",
+    "description": "Estimator forwarded a 'DocuSign' email asking him to review a bid package. He says he clicked the link but is not sure if he entered his password. Needs sign-in review and possible password reset."
+  },
+  {
+    "id": "T-1006", "client": "Acme Dental Group", "client_slug": "acme-dental", "contact": "Front Desk",
+    "priority": "p3", "tech": "marcus", "type": "printing", "days_ago": 6, "status": "open",
+    "title": "Front desk printer showing offline",
+    "description": "HP LaserJet at front desk shows offline on both check-in PCs. Printer display shows it is on the network. Staff are walking to the back office printer in the meantime."
+  },
+  {
+    "id": "T-1007", "client": "Brightwater Logistics", "client_slug": "brightwater", "contact": "Dan Okafor (Dispatch Lead)",
+    "priority": "p2", "tech": "jordan", "type": "backup", "days_ago": 4, "status": "open",
+    "title": "Datto backup failing on BW-FS01 for three nights",
+    "description": "Backup alert for BW-FS01 (file server). Last successful backup was 4 days ago. Error references a failed snapshot. No changes reported by client."
+  },
+  {
+    "id": "T-1008", "client": "Brightwater Logistics", "client_slug": "brightwater", "contact": "Dan Okafor (Dispatch Lead)",
+    "priority": "p2", "tech": "jordan", "type": "backup", "days_ago": 50, "status": "closed",
+    "title": "Datto backup failed screenshot verification on BW-DC01",
+    "description": "Screenshot verification failing on the domain controller for two days. Backups themselves completing.",
+    "resolution": "VSS writers were in a failed state. Restarted the affected services, rebooted during the maintenance window, forced a new backup. Screenshot verification passed on the next run."
+  },
+  {
+    "id": "T-1009", "client": "Northpine Credit Union", "client_slug": "northpine", "contact": "Greg Saunders (Operations Manager)",
+    "priority": "p3", "tech": "zayvier", "type": "user-lifecycle", "days_ago": 3, "status": "open",
+    "title": "New hire onboarding: two tellers starting Monday",
+    "description": "Two new tellers start Monday. Need M365 accounts, licenses, security group membership for the branch, core banking access request submitted to their vendor, and two workstations imaged."
+  },
+  {
+    "id": "T-1010", "client": "Cedar Ridge Law", "client_slug": "cedar-ridge", "contact": "Hannah Brooks (Paralegal)",
+    "priority": "p3", "tech": "marcus", "type": "network", "days_ago": 9, "status": "open",
+    "title": "Conference room access point offline",
+    "description": "Wi-Fi in the main conference room is weak or unavailable. Controller shows the AP in the conference room as disconnected. Client has a deposition scheduled there next week."
+  },
+  {
+    "id": "T-1011", "client": "Summit Peak Construction", "client_slug": "summit-peak", "contact": "Rob Delgado (Estimator)",
+    "priority": "p2", "tech": "jordan", "type": "network", "days_ago": 30, "status": "closed",
+    "title": "Jobsite trailer VPN will not connect",
+    "description": "Site VPN from the jobsite trailer to the main office dropped overnight and will not come back up.",
+    "resolution": "ISP changed the trailer's public IP. Updated the remote peer address on the main office firewall and re-established the tunnel. Asked client to request a static IP from the ISP."
+  },
+  {
+    "id": "T-1012", "client": "Summit Peak Construction", "client_slug": "summit-peak", "contact": "Maria Chen (Project Manager)",
+    "priority": "p2", "tech": "jordan", "type": "network", "days_ago": 1, "status": "open",
+    "title": "Field laptop cannot connect to VPN from jobsite hotspot",
+    "description": "PM's laptop connects to the internet over a cellular hotspot but the VPN client times out. Works fine from home Wi-Fi."
+  },
+  {
+    "id": "T-1013", "client": "Acme Dental Group", "client_slug": "acme-dental", "contact": "Lisa Moreno (Office Manager)",
+    "priority": "p4", "tech": "zayvier", "type": "m365", "days_ago": 12, "status": "open",
+    "title": "Request: Visio license for office manager",
+    "description": "Office manager wants Visio to redo the office floor plan for the new operatory. Needs quote approval before purchase."
+  },
+  {
+    "id": "T-1014", "client": "Cedar Ridge Law", "client_slug": "cedar-ridge", "contact": "Hannah Brooks (Paralegal)",
+    "priority": "p3", "tech": "priya", "type": "m365", "days_ago": 18, "status": "closed",
+    "title": "Shared mailbox intake@ not showing for new paralegal",
+    "description": "New paralegal cannot see the intake shared mailbox in Outlook.",
+    "resolution": "User had Send As but not Full Access. Granted Full Access with automapping enabled. Mailbox appeared after Outlook restart about an hour later."
+  },
+  {
+    "id": "T-1015", "client": "Northpine Credit Union", "client_slug": "northpine", "contact": "Greg Saunders (Operations Manager)",
+    "priority": "p3", "tech": "priya", "type": "security", "days_ago": 7, "status": "open",
+    "title": "DMARC reports showing failures from marketing platform",
+    "description": "DMARC aggregate reports show a high volume of failing mail from the credit union's newsletter platform. Policy is currently p=none. Client wants to move to quarantine."
+  },
+  {
+    "id": "T-1016", "client": "Brightwater Logistics", "client_slug": "brightwater", "contact": "Dispatch Desk 2",
+    "priority": "p3", "tech": "marcus", "type": "endpoint", "days_ago": 2, "status": "open",
+    "title": "Dispatch laptop very slow after Windows update",
+    "description": "Laptop takes 10 minutes to boot and the routing software freezes since last night's updates. Disk shows 100% usage in Task Manager."
+  },
+  {
+    "id": "T-1017", "client": "Acme Dental Group", "client_slug": "acme-dental", "contact": "Front Desk",
+    "priority": "p3", "tech": "zayvier", "type": "endpoint", "days_ago": 22, "status": "closed",
+    "title": "Teams calls drop audio after a few minutes",
+    "description": "Front desk headset loses audio partway through Teams calls. Caller can still hear them.",
+    "resolution": "Disabled USB selective suspend and power saving on the USB hub in Device Manager, updated the headset firmware and the Teams client. No drops reported after a week."
+  },
+  {
+    "id": "T-1018", "client": "Cedar Ridge Law", "client_slug": "cedar-ridge", "contact": "James Whitfield (Associate Attorney)",
+    "priority": "p3", "tech": "zayvier", "type": "endpoint", "days_ago": 0, "status": "open",
+    "title": "No audio in Teams on new laptop",
+    "description": "Attorney received a new laptop this week. Teams calls connect but there is no audio in or out with his USB headset. Laptop speakers work."
+  },
+  {
+    "id": "T-1019", "client": "Summit Peak Construction", "client_slug": "summit-peak", "contact": "Maria Chen (Project Manager)",
+    "priority": "p2", "tech": "priya", "type": "user-lifecycle", "days_ago": 2, "status": "open",
+    "title": "Offboarding: project manager last day Friday",
+    "description": "PM Tom Avery's last day is Friday. Disable account end of day, convert mailbox to shared with access for Maria Chen, transfer OneDrive files, collect laptop and remove from management."
+  },
+  {
+    "id": "T-1020", "client": "Northpine Credit Union", "client_slug": "northpine", "contact": "Greg Saunders (Operations Manager)",
+    "priority": "p1", "tech": "priya", "type": "security", "days_ago": 0, "status": "open",
+    "title": "EDR alert: encoded PowerShell command on NP-TELLER03",
+    "description": "EDR flagged an encoded PowerShell command launched from a Word process on NP-TELLER03. Device isolated automatically. Need investigation and user follow up."
+  },
+  {
+    "id": "T-1021", "client": "Northpine Credit Union", "client_slug": "northpine", "contact": "Front Teller Line",
+    "priority": "p2", "tech": "zayvier", "type": "m365", "days_ago": 14, "status": "closed",
+    "title": "User account locking out repeatedly",
+    "description": "Teller locked out four times this morning. Each unlock lasts about 15 minutes.",
+    "resolution": "Lockout source traced to an old phone still signed into the mail app with the previous password. User removed the account from the old phone. No further lockouts."
+  },
+  {
+    "id": "T-1022", "client": "Acme Dental Group", "client_slug": "acme-dental", "contact": "Lisa Moreno (Office Manager)",
+    "priority": "p2", "tech": "jordan", "type": "web", "days_ago": 5, "status": "open",
+    "title": "SSL certificate for patient portal expires in 10 days",
+    "description": "Monitoring flagged the patient portal certificate expiring soon. Portal is hosted by a third party vendor; need to confirm who renews it."
+  },
+  {
+    "id": "T-1023", "client": "Brightwater Logistics", "client_slug": "brightwater", "contact": "Account Manager (internal)",
+    "priority": "p4", "tech": "zayvier", "type": "m365", "days_ago": 15, "status": "open",
+    "title": "License review: list unassigned and unused licenses",
+    "description": "Account manager wants a list of unassigned licenses and users who have not signed in for 30+ days before the quarterly business review."
+  },
+  {
+    "id": "T-1024", "client": "Summit Peak Construction", "client_slug": "summit-peak", "contact": "Estimating Office",
+    "priority": "p3", "tech": "marcus", "type": "printing", "days_ago": 60, "status": "closed",
+    "title": "Plotter not printing large format drawings",
+    "description": "Wide format plotter accepts jobs but nothing prints. Small test pages work.",
+    "resolution": "Print spooler was stuck on a corrupted job. Cleared the spooler queue and reinstalled the vendor driver with the HPGL/2 option. Large format jobs printing normally."
+  }
+]
